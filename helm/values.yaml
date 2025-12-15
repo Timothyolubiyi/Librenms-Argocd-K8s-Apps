@@ -12,10 +12,10 @@ env:
   DB_HOST: librenms-mariadb
   DB_NAME: librenms
   DB_USER: librenms
-  DB_PASSWORD: librenms_password
+  DB_PASSWORD: 1234567890
 
 service:
-  type: ClusterIP
+  type: LoadBalancer
   port: 8000
 
 ingress:
@@ -47,8 +47,8 @@ mariadb:
   auth:
     database: librenms
     username: librenms
-    password: librenms_password
-    rootPassword: root_password
+    password: 1234567890
+    rootPassword: ubnt123
   primary:
     persistence:
       enabled: true
