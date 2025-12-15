@@ -1,0 +1,27 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: librenms
+  namespace: argocd
+spec:
+  project: default
+
+  source:
+    repoURL: https://github.com/librenms/librenms-helm
+    targetRevision: main
+    chart: librenms
+    helm:
+      valueFiles:
+        - values.yaml
+
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: librenms
+
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
+
