@@ -1,3 +1,6 @@
+## To Launch, Create an EC2 Server Instance and proceed with below ##
+
+
 1. Generate a Valid APP_KEY (IMPORTANT)
 
 LibreNMS will not start without a valid APP_KEY.
