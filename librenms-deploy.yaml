@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: librenms
+  namespace: librenms
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: librenms
+  template:
+    metadata:
+      labels:
+        app: librenms
+    spec:
+      containers:
+        - name: librenms
+          image: librenms/librenms:latest
+          ports:
+            - containerPort: 8000
+          envFrom:
+            - configMapRef:
+                name: librenms-config
+          volumeMounts:
+            - mountPath: /data
+              name: librenms-data
+      volumes:
+        - name: librenms-data
+          persistentVolumeClaim:
+            claimName: librenms-data

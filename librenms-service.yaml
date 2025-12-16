@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: librenms
+  namespace: librenms
+spec:
+  type: LoadBalancer
+  selector:
+    app: librenms
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8000
