@@ -7,5 +7,5 @@ data:
   DB_HOST: mysql
   DB_NAME: librenms
   DB_USER: librenms
-  DB_PASSWORD: 1234567890
+  DB_PASSWORD: TITAnic@2
   TZ: Africa/Lagos
