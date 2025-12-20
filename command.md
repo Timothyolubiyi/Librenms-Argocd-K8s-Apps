@@ -65,7 +65,7 @@ kubectl version --client
 4. # Create EKS cluster
 
   eksctl create cluster \
-  --name eks-cluster-101 \
+  --name eks-cluster-102 \
   --version 1.29 \
   --region eu-north-1 \
   --nodegroup-name ng-2 \
@@ -76,10 +76,10 @@ kubectl version --client
 
 
 # Get EKS Cluster service
-eksctl get cluster --name eks-cluster-101 --region eu-north-1
+eksctl get cluster --name eks-cluster-102 --region eu-north-1
 
  # Update eks kubeconfig once k8s cluster is installed successfully
-aws eks update-kubeconfig --name eks-cluster-101
+aws eks update-kubeconfig --name eks-cluster-102
 
 
 # INSTALL DOCKER ON THE EC2 SERVER

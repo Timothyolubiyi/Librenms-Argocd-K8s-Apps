@@ -4,7 +4,7 @@ metadata:
   name: librenms
   namespace: librenms
 spec:
-  replicas: 1
+  replicas: 2
   selector:
     matchLabels:
       app: librenms
