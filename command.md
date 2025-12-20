@@ -152,3 +152,7 @@ admin
 
 - Get ArgoCD default password
 kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 -d
+
+
+## Delele
+eksctl delete cluster --name eks-cluster-101 --region eu-north-1
